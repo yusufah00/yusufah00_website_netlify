@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projek</title>
+    <style>
+        nav{
+    background-color: #333;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float:left;
+    font-size: 12px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    <label for="">Isi dengan huruf besar semua</label>
+    <br>
+    <input type="text" id="namaDepan" name="namaDepan" placeholder="Nama Kamu">
+    <br>
+    <input type="text" id="namaBelakang" name="namaBelakang" placeholder="Nama Pasangan Kamu">
+    <br>
+    <button onclick="gabungNama()">Klik</button>
+    <br>
+    <p id="namaLengkap"></p>
+    
+    
+</body>
+
+<script>
+    function gabungNama() {
+        var namaDepan=document.getElementById("namaDepan").value;
+        var namaBelakang = document.getElementById("namaBelakang").value;
+        var namaLengkap = namaDepan + "  &#x2764; " + namaBelakang;
+        document.getElementById("namaLengkap").innerHTML = namaLengkap;
+        if (namaDepan == "" && namaBelakang == "YUSUF") {
+            alert("Terima Kasih");
+            return false;
+            } else {
+            alert("Nama Siapa tu woi ;(");
+            return true;
+        }
+        
+    }
+
+    
+</script>
+</html>
